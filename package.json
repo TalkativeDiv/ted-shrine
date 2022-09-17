@@ -1,0 +1,44 @@
+{
+  "name": "ted-shrine",
+  "version": "1.0.0",
+  "description": "a basic ted shrine!",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index",
+    "css": "postcss ./public/css/styles.css -o ./public/assets/styles.css -w",
+    "start": "concurrently \"npm:server\" \"npm:css\""
+  },
+  "author": "Abhirath and Abhishek",
+  "license": "MIT",
+  "dependencies": {
+    "@fastify/static": "^6.5.0",
+    "@fastify/view": "^7.1.0",
+    "alpinejs": "^3.10.3",
+    "autoprefixer": "^10.4.11",
+    "ejs": "^3.1.8",
+    "fastify": "^4.6.0",
+    "postcss-cli": "^10.0.0"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "concurrently": "^7.4.0",
+    "cssnano": "^5.1.13",
+    "eslint": "^8.23.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-stylelint": "^16.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "install": "^0.13.0",
+    "nodemon": "^2.0.20",
+    "postcss": "^8.4.16",
+    "postcss-deadcss": "^1.0.0",
+    "postcss-import": "^15.0.0",
+    "postcss-short": "^5.0.0",
+    "postcss-variable-compress": "^1.2.0",
+    "prettier": "^2.7.1",
+    "stylelint": "^14.11.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^28.0.0",
+    "stylelint-prettier": "^2.0.0",
+    "tailwindcss": "^3.1.8"
+  }
+}

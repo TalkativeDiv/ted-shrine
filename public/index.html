@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css" type="text/css" />
+    <script src="/js" async defer type="module"></script>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body>
+    <div
+      x-data="{
+    count: null,
+
+    getPokemon() {
+        fetch('https://api.countapi.xyz/hit/mysite.com/visits')
+            .then((response) => response.json())
+            .then((json) => this.count = json.value);
+    }
+}"
+      x-init="getPokemon()"
+    >
+      <p
+        x-text="'ted has ' + parseInt(count).toLocaleString(
+  undefined, // leave undefined to use the visitor's browser 
+             // locale or a string like 'en-US' to override it.
+  { minimumFractionDigits: 0 }
+) + ' friends'"
+      ></p>
+    </div>
+  </body>
+</html>
